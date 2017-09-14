@@ -1,3 +1,7 @@
-1
-2
-3
+Tidsfrister
+Kalender
+Alarmer
+Countdowns
+Møter
+Mål
+Oversikt
