@@ -1,6 +1,10 @@
-1
-2
-3
-Test
-potet
-test
+Erik Sine stories:
+
+Tidsfrister
+Kalender
+Alarmer
+Countdowns
+Møter
+Mål
+Oversikt
+
