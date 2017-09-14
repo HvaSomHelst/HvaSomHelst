@@ -1,2 +1,3 @@
-Test
-potet
+hei
+og
+hade
