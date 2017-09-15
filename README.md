@@ -14,7 +14,7 @@ PG account:
 https://github.com/HvaSomHelst
 
 Roadmap: 
-https://trello.com/b/D7emZMyE/stories
+https://hvasomhelst.storiesonboard.com/m/hvasomhelst
 
 Product Details:
 
