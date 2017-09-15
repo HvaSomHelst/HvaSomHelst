@@ -15,6 +15,10 @@ https://github.com/HvaSomHelst
 
 Roadmap: 
 https://hvasomhelst.storiesonboard.com/m/hvasomhelst
+Backlog:
+https://trello.com/b/wPJceq2j/to-do-list-backlog
+(We as a group has 9 SP)
+
 
 Product Details:
 
