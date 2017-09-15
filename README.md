@@ -12,3 +12,6 @@ https://github.com/Saha13
 
 PG account:
 https://github.com/HvaSomHelst
+
+Roadmap: 
+https://trello.com/b/D7emZMyE/stories
