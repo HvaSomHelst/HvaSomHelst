@@ -14,7 +14,14 @@ PG account:
 https://github.com/HvaSomHelst
 
 Roadmap: 
-https://trello.com/b/D7emZMyE/stories
+https://hvasomhelst.storiesonboard.com/m/hvasomhelst
+
+Backlog/Project Board:
+https://trello.com/b/wPJceq2j/to-do-list-backlog
+(We as a group has 9 SP)
+
+Github Link:
+https://github.com/hvasomhelst/hvasomhelst
 
 Product Details:
 
