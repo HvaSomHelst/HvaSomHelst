@@ -1,5 +1,7 @@
 # HvaSomHelst
 
+LINK TIL HEROKU-APP: https://hvasomhelst.herokuapp.com/
+
 Team Members:
 Jørgen Bordal Andersen
 https://github.com/Jorgba15
