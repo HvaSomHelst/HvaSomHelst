@@ -15,8 +15,8 @@
     <input id="inplistname" placeholder="List name" />
     <input id="inplistdescription" placeholder="Description" />
     <h3>Due by:</h3>
-    <input type="date" id="inpduedate">
-    <input id="inpduetime" placeholder="hh:mm:ss" />
+    <input type="date" id="duedate">
+    <input id="duetime" placeholder="hh:mm:ss" />
     <button id="btncreate">Create list</button>
     <br>
     <button onClick="window.location='showlists.html';" value="click here" id="seelists">Go to your lists</button>
@@ -26,17 +26,17 @@
 
 <script>
     // init ------------------------------------------
-    var listname  = document.getElementById("inplistname");
-    var listdescription  = document.getElementById("inplistdescription");
-    var duedate  = document.getElementById("inpduedate");
-    var duetime  = document.getElementById("inpduetime");
+    var list = document.getElementById("listname");
+    var description  = document.getElementById("listdescription");
+    var date = document.getElementById("duedate");
+    var time = document.getElementById("duetime");
     var btncreate = document.getElementById("btncreate");
     var txtOut = document.getElementById("txtOut");
     var txtMsg = document.getElementById("txtMsg");
 
     btncreate.onclick = createList;
 
-    var d = new Date(duedate.value);
+    var d = new Date(date.value);
         var month = d.getMonth();
         var i = 1;
         var m = month;
@@ -51,8 +51,8 @@
         var upload = JSON.stringify({
             listname: inplistname.value,
             listdescription: inplistdescription.value,
-            duedate: inpduedate.value,
-            duetime: inpduetime.value
+            date: duedate.value,
+            time: duetime.value
 
         });
 
