@@ -20,11 +20,11 @@
     <button id="btncreate">Create list</button>
     <br>
     <button onClick="window.location='showlists.html';" value="click here" id="seelists">Go to your lists</button>
-    
+
     </div>
 </body>
 
-<script> 
+<script>
     // init ------------------------------------------
     var listname  = document.getElementById("inplistname");
     var listdescription  = document.getElementById("inplistdescription");
@@ -32,63 +32,63 @@
     var duetime  = document.getElementById("inpduetime");
     var btncreate = document.getElementById("btncreate");
     var txtOut = document.getElementById("txtOut");
-    var txtMsg = document.getElementById("txtMsg"); 
-    
+    var txtMsg = document.getElementById("txtMsg");
+
     btncreate.onclick = createList;
-    
-    var d = new Date(duedate.value);        
-        var month = d.getMonth();        
+
+    var d = new Date(duedate.value);
+        var month = d.getMonth();
         var i = 1;
         var m = month;
         d.setDate(i);
-    
+
     //få tak i logindata/token
     var logindata = JSON.parse(localStorage.getItem("logindata"));
-    
+
     // -----------------------------------------------
     function createList() {
-        
+
         var upload = JSON.stringify({
             listname: inplistname.value,
             listdescription: inplistdescription.value,
             duedate: inpduedate.value,
-            duetime: inpduetime.value            
-            
+            duetime: inpduetime.value
+
         });
-        
+
         var fetchSettings = {
             method: "POST",
             body: upload
         }
-        
-        var url = "http://localhost:3000/lists?token=" + logindata.token;
+
+        var url = "postgres://rtuzezunvkpskz:f8f4b24ab149f3aa4831952cb5aff64facd48f7d3d182c5fbcc44b766ff3607c@ec2-46-137-174-67.eu-west-1.compute.amazonaws.com:5432/dfe503654n2qf6/lists" + logindata.token;
         superfetch(url, "json", succ, error, fetchSettings);
-        
+
         
     }
-    
-    
+
+
     //success --------------------------------------
     function succ(data) {
-        
+
         if(logindata) {
-            
+
             localStorage.setItem("listedata", JSON.stringify(data));
             window.location.href = "showlists.html";
-            
+
         }
         else{
             console.log(data);
         }
-        
-        
+
+
     }
-    
+
     //error ----------------------------------------
     function error(err) {
         console.log(err);
-        
-    }   
+
+    }
 </script>
 
 </html>
