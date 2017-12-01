@@ -16,30 +16,30 @@
             <h3 id="innlogget"></h3>
             <br>
             <br>
-        
+
             <button onClick="window.location='createlist.html';" value="click here"id="seminelister">Lag ny liste</button>
 
             <button onClick="window.location='showlists.html';" value="click here"id="showlists">Se mine lister</button>
-            
+
             <a href = "index.html"> <button>Logg Ut</button> </a>
-            <a href = "tasks.html"> <button>Se Mine Tasks</button> </a>
+            <a href = "Tasks.html"> <button>Se Mine Tasks</button> </a>
         </div>
     </div>
 
 </body>
-    
+
 <script>
-    
-    
+
+
     var opprettnyliste  = document.getElementById("opprettnyliste");
     var seminelister  = document.getElementById("seminelister");
     var loggut = document.getElementByIdL("loggut")
-    
+
     let object = JSON.parse(localStorage.getItem("logindata"));
-    
+
     document.getElementById("innlogget").innerHTML = fultnavn;
 
-    
+
 </script>
 
 
