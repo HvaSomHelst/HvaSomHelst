@@ -26,10 +26,32 @@
         <br>
         <br>
         <button id="btn"> Create Task </button>
+        <br>
+        <h3 id = "teksten"><h2>
 
     </div>
 
 </body>
+
+<script>
+
+    var TaskNavn = document.getElementById("TaskNavn");
+    var Beskrivelse = document.getElementById("Beskrivelse");
+    var dato = document.getElementById("dato");
+    var klokkeslett = document.getElementById("klokkeslett");
+    var btn = document.getElementById("btn");
+    var teksten = document.getElementById("teksten");
+
+
+    btn.onclick = btnfunction;
+
+    function btnfunction() {
+
+        teksten.innerHTML += "Oppgavenavn: " + TaskNavn.value + ", Beskrivelse: " + Beskrivelse.value + ", " + "dato og klokkeslett: " + dato.value + " " + klokkeslett.value;
+
+    }
+
+</script>
 
 <style>
 
