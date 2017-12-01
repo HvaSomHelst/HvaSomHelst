@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Create user</title>
+    <script src="superfetch2.js"></script>
+    <link href="style.css" rel="stylesheet">
+   
+</head>
+
+<body>
+    <div id="box1">
+    <h1 id="velkommen">Opprett ny bruker</h1>
+    <input id="inputlogin" placeholder="Login name" />
+    <input id="inputpassword" placeholder="Password" type="password" />
+    <input id="inputpassword2" placeholder="Repeat password" type="password" />
+    <button id="btncreate">Create user</button>
+    <br>
+    </div>
+</body>
+
+<script> 
+    
+    var inputlogin  = document.getElementById("inputlogin");
+    var inputpassw  = document.getElementById("inputpassw");
+    var inputpassw2  = document.getElementById("inputpassw2");
+    var btncreate = document.getElementById("btncreate");
+    var txtOut    = document.getElementById("txtOut");
+    
+    btncreate.onclick = createUser;
+    
+    /* if Inputpassword 1 == inputpassword 2 
+                    console.log(works)
+        else
+                Console.log(error)
+                */
+    
+    // -----------------------------------------------
+    function createUser() {
+        
+        var url = "postgres://rtuzezunvkpskz:f8f4b24ab149f3aa4831952cb5aff64facd48f7d3d182c5fbcc44b766ff3607c@ec2-46-137-174-67.eu-west-1.compute.amazonaws.com:5432/dfe503654n2qf6/users";
+        var upload = JSON.stringify({
+            name: inputlogin.value,
+            password: inputpassw.value,
+           
+            
+        });
+        
+        var fetchSettings = {
+            method: "POST",
+            body: upload
+        }
+        
+        
+        superfetch(url, "json", succ, error, fetchSettings);
+        
+    }
+    
+    
+    //success --------------------------------------
+    function succ(data) {
+        console.log(data);
+        window.location.href = "home.html";
+        
+    }
+    
+    //error ----------------------------------------
+    function error(err) {
+        console.log(err);
+    }   
+</script>
+
+</html>
